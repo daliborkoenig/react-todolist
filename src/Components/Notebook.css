@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+
+.Notebook {
+  /* margin: 5em auto; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+.notebook-wrapper {
+  max-width: calc(100% / 2);
+  min-width: 40em;
+  max-height: calc (100%);
+  min-height: 100%;
+}
+
+.notebook {
+  height: 40em;
+  width: 70%;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  border-radius: 5px 15px 15px 5px;
+  transform-origin: left center 0px;
+  display: inline-block;
+  margin: 30px;
+  perspective: 2000px;
+  transform: rotate(-5deg);
+}
+
+/* .notebook::after{
+  content: "";
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 20%;
+  z-index: 100;
+  border-radius: 2px;
+  right: -30%;
+  content: "";
+  background: url('../Images/pen.png') no-repeat;
+  background-size: contain;
+} */
+
+.notebook-cover {
+  /* background: #26362a; */
+  background: url('../Images/leather-texture.png');
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 5px 15px 15px 5px;
+  z-index: 100;
+  transition: 0.5s linear;
+  transform-style: preserve-3d;
+  transform-origin: left center 0px;
+  top: 15%;
+}
+.notebook-cover:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: calc(100% + 2px);
+  top: -1px;
+  /* z-index: 9; */
+  border-radius: 2px;
+  right: 25px;
+  transition: 2s ease;
+  background: linear-gradient(to right, #1e606e 0%, #2e95aa 12%, #1e606e 25%, #2e95aa 37%, #1e606e 50%, #2e95aa 62%, #1e606e 75%, #2e95aa 87%, #1e606e 100%);
+}
+
+.notebook-skin {
+  height: 150px;
+  background: #e8e8e0;
+  margin-top: 80px;
+  padding: 1em;
+  font-size: 2em;
+  position: relative;
+  z-index: -10;
+  color: #222;
+  text-align: left;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  top: 15%;
+}
+.notebook-skin:before {
+  content: "© Dalibor König, 2021";
+  padding-top: 20px;
+  padding-left: 5px;
+  font-size: small;
+  position: absolute;
+  width: 99%;
+  height: 15px;
+  left: 0;
+  bottom: 0;
+  background: #cddc39;
+}
+
+.notebook-page {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #fbfae8;
+  z-index: 0;
+  border-radius: 5px 16px 16px 5px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #fbfae8 19px, #d1d1d1 1px);
+  background-size: 100% 20px;
+  top: 15%;
+}

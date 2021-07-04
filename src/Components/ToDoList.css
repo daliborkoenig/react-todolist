@@ -1,0 +1,68 @@
+.ToDoList{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* border: 3px solid black; */
+}
+
+.mainTodo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.addItems{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.addItems > input:nth-child(1){
+  width: 80%;
+}
+.addItems > input:nth-child(2){
+  cursor: pointer;
+  width: 20%;
+}
+.editItems{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  padding: 20px;
+  z-index: 200;
+}
+.editItems > input:nth-child(1){
+  width: 80%;
+}
+.editItems > input:nth-child(2){
+  cursor: pointer;
+  width: 20%;
+}
+.far{
+  color: black;
+}
+.task{
+  display: flex;
+  margin-bottom: -1px;
+  justify-content: space-between;
+}
+.task > input,
+.task > input:active{
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.icons > .far{
+  padding-left: 8px;
+  cursor: pointer;
+}
