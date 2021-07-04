@@ -9,8 +9,8 @@ You can add, delete and edit tasks.
 
 Let me know what you think.
 
-![Screenshot](./screenshot.png)
-![Screenshot](./screenshot2.png)
+![Screenshot](./Screenshot.png)
+![Screenshot](./Screenshot2.png)
 
 
 
