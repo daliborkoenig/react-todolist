@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './ToDoList.css'
+import './ToDoList.scss'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 
@@ -67,7 +67,7 @@ function ToDoList(props) {
           <input type="submit" value="edit task"></input>
         </form>) : ""}        
         {todoList.map(item=>{return (
-          <form className="task">
+          <form className="task" key={Math.random()}>
             <input type="text" value={item}></input>
             <div className="icons">
               <i className="far fa-minus-square" onClick={removeTask} title="delete"></i>

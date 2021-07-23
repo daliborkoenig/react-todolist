@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import anime from 'animejs'
-import './Notebook.css'
+import './Notebook.scss'
 import ToDoList from './ToDoList';
 
 
