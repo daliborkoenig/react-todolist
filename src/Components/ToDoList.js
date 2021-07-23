@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './ToDoList.scss'
 import '@fortawesome/fontawesome-free/css/all.css'
 
@@ -8,18 +8,18 @@ function ToDoList(props) {
   const [todoList, setTodoList] = useState([])
   const [edited, setEdited] = useState("")
   const [edit, setEdit] = useState(false)
-  
+
   const handleInput = (e) => {
-    if(e.target.value.length === 0){}
-    else{
+    if (e.target.value.length === 0) { }
+    else {
       setInput(e.target.value)
     }
     console.log(input);
   }
   const addItems = (e) => {
     e.preventDefault()
-    if(!input.length){}
-    else{
+    if (!input.length) { }
+    else {
       setTodoList(todoList => [...todoList, input]);
       setInput("")
     }
@@ -41,8 +41,8 @@ function ToDoList(props) {
     // console.log(e.target.parentElement.previousElementSibling);
   }
   const handleEdit = (e) => {
-    if(e.target.value.length === 0){}
-    else{
+    if (e.target.value.length === 0) { }
+    else {
       setEdited(e.target.value)
     }
     console.log(edited);
@@ -58,24 +58,26 @@ function ToDoList(props) {
   return (
     <div className="ToDoList">
       <div className="mainTodo">
-        <form className="addItems"onSubmit={addItems}>
-          <input type="text" placeholder="...write your tasks here" onChange={handleInput} value={input}/>
+        <form className="addItems" onSubmit={addItems}>
+          <input type="text" placeholder="...write your tasks here" onChange={handleInput} value={input} />
           <input type="submit" value="add task"></input>
         </form>
-        {edit ? (<form className="editItems"onSubmit={editItem}>
-          <input type="text" placeholder="...edit your task here" onChange={handleEdit} value={edited}/>
+        {edit ? (<form className="editItems" onSubmit={editItem}>
+          <input type="text" placeholder="...edit your task here" onChange={handleEdit} value={edited} />
           <input type="submit" value="edit task"></input>
-        </form>) : ""}        
-        {todoList.map(item=>{return (
-          <form className="task" key={Math.random()}>
-            <input type="text" value={item}></input>
-            <div className="icons">
-              <i className="far fa-minus-square" onClick={removeTask} title="delete"></i>
-              <i className="far fa-check-square" onClick={doneTask} title="done"></i>
-              <i className="far fa-edit" onClick={editTask} title="edit"></i>
-            </div>
-          </form>
-        )})}
+        </form>) : ""}
+        {todoList.map(item => {
+          return (
+            <form className="task" key={Math.random()}>
+              <input type="text" value={item}></input>
+              <div className="icons">
+                <i className="far fa-minus-square" onClick={removeTask} title="delete"></i>
+                <i className="far fa-check-square" onClick={doneTask} title="done"></i>
+                <i className="far fa-edit" onClick={editTask} title="edit"></i>
+              </div>
+            </form>
+          )
+        })}
 
       </div>
 
